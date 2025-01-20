@@ -1,0 +1,21 @@
+/* Custom styles */
+.icon-home,
+.icon-mail,
+.icon-settings,
+.icon-menu {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    margin-right: 8px;
+}
+
+.uk-card .icon-home,
+.uk-card .icon-mail,
+.uk-card .icon-settings {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIkit Demo</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.1/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="root">
+        <!-- Navigation -->
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="#"><i class="icon-home"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-mail"></i> Contact</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-settings"></i> Settings</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <a class="uk-navbar-toggle" href="#" uk-toggle="target: #offcanvas-nav">
+                    <i class="icon-menu"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Slider -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider="center: true">
+            <ul class="uk-slider-items uk-grid uk-grid-match" uk-height-viewport="offset-top: true; offset-bottom: 30">
+                <li class="uk-width-3-4">
+                    <div class="uk-cover-container">
+                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" alt="" uk-cover>
+                        <div class="uk-position-center uk-panel"><h1>Nature</h1></div>
+                    </div>
+                </li>
+                <li class="uk-width-3-4">
+                    <div class="uk-cover-container">
+                        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2" alt="" uk-cover>
+                        <div class="uk-position-center uk-panel"><h1>Architecture</h1></div>
+                    </div>
+                </li>
+                <li class="uk-width-3-4">
+                    <div class="uk-cover-container">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="" uk-cover>
+                        <div class="uk-position-center uk-panel"><h1>Technology</h1></div>
+                    </div>
+                </li>
+            </ul>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        </div>
+
+        <!-- Slideshow -->
+        <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push; autoplay: true">
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="" uk-cover>
+                    <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                        <h2 class="uk-margin-remove">Beautiful Landscapes</h2>
+                        <p class="uk-margin-remove">Discover nature's beauty</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000" alt="" uk-cover>
+                    <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                        <h2 class="uk-margin-remove">Urban Life</h2>
+                        <p class="uk-margin-remove">Experience city vibes</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0" alt="" uk-cover>
+                    <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                        <h2 class="uk-margin-remove">Ocean Views</h2>
+                        <p class="uk-margin-remove">Feel the ocean breeze</p>
+                    </div>
+                </li>
+            </ul>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            <div class="uk-position-bottom-center uk-position-small">
+                <ul class="uk-dotnav">
+                    <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+                    <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+                    <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="uk-section uk-section-primary uk-light uk-padding-large">
+            <div class="uk-container uk-text-center">
+                <h1 class="uk-heading-medium">Welcome to UIkit Demo</h1>
+                <p class="uk-text-lead">A beautiful and modern website built with UIkit</p>
+                <button class="uk-button uk-button-default uk-margin-right">Learn More</button>
+                <button class="uk-button uk-button-secondary">Get Started</button>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="uk-section">
+            <div class="uk-container">
+                <h2 class="uk-heading-line uk-text-center"><span>Photo Gallery</span></h2>
+                <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: slide">
+                    <div>
+                        <a class="uk-inline" href="https://images.unsplash.com/photo-1561214115-f2f134cc4912" data-caption="Art & Culture">
+                            <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400&h=300&fit=crop" alt="">
+                            <div class="uk-position-center uk-overlay uk-overlay-primary">
+                                <span>Art & Culture</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="https://images.unsplash.com/photo-1488646953014-85cb44e25828" data-caption="Travel">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop" alt="">
+                            <div class="uk-position-center uk-overlay uk-overlay-primary">
+                                <span>Travel</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" data-caption="Food">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="">
+                            <div class="uk-position-center uk-overlay uk-overlay-primary">
+                                <span>Food</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" data-caption="Nature">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop" alt="">
+                            <div class="uk-position-center uk-overlay uk-overlay-primary">
+                                <span>Nature</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="https://images.unsplash.com/photo-1487958449943-2429e8be8625" data-caption="Architecture">
+                            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop" alt="">
+                            <div class="uk-position-center uk-overlay uk-overlay-primary">
+                                <span>Architecture</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="uk-inline" href="https://images.unsplash.com/photo-1518770660439-4636190af475" data-caption="Technology">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop" alt="">
+                            <div class="uk-position-center uk-overlay uk-overlay-primary">
+                                <span>Technology</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="uk-section">
+            <div class="uk-container">
+                <h2 class="uk-heading-line uk-text-center"><span>Our Features</span></h2>
+                <div class="uk-child-width-1-3@m uk-grid-match" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center">
+                            <i class="icon-home uk-margin-bottom"></i>
+                            <h3 class="uk-card-title">Modern Design</h3>
+                            <p>Clean and modern interface built with UIkit components.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center">
+                            <i class="icon-settings uk-margin-bottom"></i>
+                            <h3 class="uk-card-title">Customizable</h3>
+                            <p>Easily customize and extend with UIkit's flexible framework.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center">
+                            <i class="icon-mail uk-margin-bottom"></i>
+                            <h3 class="uk-card-title">Responsive</h3>
+                            <p>Fully responsive design that works on all devices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Off-canvas Navigation -->
+        <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <h3>Navigation</h3>
+                <ul class="uk-nav uk-nav-default">
+                    <li class="uk-active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                    <li><a href="#"><i class="icon-mail"></i> Contact</a></li>
+                    <li><a href="#"><i class="icon-settings"></i> Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="icons.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
